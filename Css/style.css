@@ -1,0 +1,336 @@
+:root {
+  --primary: #d6dad9;
+  --bg: rgba(177, 177, 177);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Sans-serif;
+  background-color: var(--bg);
+  color: white;
+  min-height: 1000px;
+}
+
+/* ====================Navbar=================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 6%;
+  background-color: rgb(60, 173, 131);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.navbar .navbar-logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+.navbar .navbar-nav a:hover {
+  color: rgb(255, 194, 79);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-logo span {
+  font-style: italic;
+  color: rgb(255, 194, 79);
+}
+
+.navbar .extra-navbar a {
+  color: whitesmoke;
+  margin: 0 0.5rem;
+}
+.navbar .extra-navbar a:hover {
+  color: rgb(255, 194, 79);
+}
+#menu-teh {
+  display: none;
+}
+/* ====================Navbar=================== */
+
+/* ============HeroSection===============*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/Susu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(177, 177, 177, 1) 8%,
+    rgba(204, 217, 237, 0) 25%
+  );
+}
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 50rem;
+}
+.hero .content h1 {
+  color: white;
+  font-size: 35px;
+  line-height: 1;
+}
+.hero .content span {
+  color: rgb(255, 194, 79);
+}
+.hero .content p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 100;
+  margin-top: 5px;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(255, 194, 79);
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(1, 1, 3, 1);
+}
+/* ============HeroSection===============*/
+
+/* ============TentangKami===============*/
+.about {
+  padding: 8rem 7% 1.6rem;
+}
+.about h2 {
+  text-align: center;
+  color: rgb(255, 194, 79);
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 1);
+  margin-bottom: 3rem;
+}
+.about h2 span {
+  color: rgb(60, 173, 131);
+}
+.about .row {
+  display: flex;
+}
+.about .row .about-img {
+  flex: 1 1 55rem;
+  margin-left: 10px;
+}
+.about .row .about-img img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 20;
+  padding: 0 1rem;
+}
+.about .row .content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 100px;
+  line-height: 1.4;
+}
+/*TentangKami/*
+
+/*Menu*/
+.menu {
+  padding: 8rem 7% 1.6rem;
+}
+.menu h2 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 1);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.menu p {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+.menu span {
+  color: rgb(255, 194, 79);
+}
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.menu .row .menu-card img {
+  border-radius: 100px;
+  width: 40%;
+}
+.menu .row h3 {
+  margin: 1rem auto 0.5rem;
+}
+.menu .row .menu-card {
+  text-align: center;
+  justify-content: center;
+}
+.menu .row p {
+  margin-bottom: 1.2rem;
+}
+/*Menu*/
+
+/*kontak*/
+.kontak {
+  padding: 8rem 7% 1.5rem;
+}
+.kontak .row {
+  display: flex;
+  margin-top: 5rem;
+}
+.kontak .row .isi-kontak {
+  text-align: center;
+}
+.kontak h2 {
+  font-size: 4rem;
+  text-shadow: 1px 1px 2px rgba(1, 1, 3, 1);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.kontak span {
+  color: rgb(255, 194, 79);
+}
+.kontak .row .isi-kontak img {
+  width: 50%;
+  border-radius: 400px;
+}
+.kontak .row .isi-kontak h4 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+/*kontak*/
+
+/*footer*/
+footer {
+  color: white;
+  background-color: black;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Media Platform /*
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  #menu-teh {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(60, 173, 131);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: rgb(247, 247, 245);
+    display: block;
+    font-size: 2rem;
+    margin: 1.5rem;
+    padding: 1.4rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+  .about .row .about-img img {
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile Phone */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
